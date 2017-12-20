@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date 2017/12/10 20:40
  */
 @Controller  //声明为一个控制器
+@RequestMapping({"/","/homepage"})
 public class HomeController {
     /**
      * 处理对“/”的get请求
      * @return
      */
-    @RequestMapping(value = "/",method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String home(){
         return "home";
     }
